@@ -1,0 +1,36 @@
+.menu-page {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.category-buttons button {
+  padding: 0.6rem 1.4rem;
+  background: transparent;
+  border: 1px solid #444;
+  color: #d8d2c8;
+  cursor: pointer;
+}
+
+.category-buttons button.active {
+  background-color: #f5f0e8;
+  color: #0d0d0d;
+}
+
+.menu-list {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #1f1f1f;
+}
