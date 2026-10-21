@@ -1,16 +1,42 @@
-# React + Vite
+# Rivera Coffee
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Rivera Coffee is a React/Vite cafe website with a small FastAPI backend for
+contact form submissions.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Install the frontend dependencies:
 
-## React Compiler
+```powershell
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Start the backend from the project root:
 
-## Expanding the ESLint configuration
+```powershell
+.\backend\.venv\Scripts\python.exe -m uvicorn main:app --reload --app-dir backend
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+In another terminal, start the frontend:
+
+```powershell
+npm run dev
+```
+
+The frontend runs at `http://localhost:5173` and sends contact form requests
+to `http://localhost:8000/api/contact`.
+
+To use a different backend URL, create a `.env` file in the project root:
+
+```env
+VITE_API_URL=https://api.example.com
+```
+
+## Useful commands
+
+```powershell
+npm run lint
+npm run build
+```
+
+The backend health endpoint is available at `http://localhost:8000/health`.
