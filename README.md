@@ -1,7 +1,8 @@
 # Rivera Coffee
 
 Rivera Coffee is a React/Vite cafe website with a small FastAPI backend for
-contact form submissions.
+contact form submissions. Submitted messages are stored in a local SQLite
+database at `backend/cafe.db`.
 
 ## Run locally
 
@@ -40,3 +41,10 @@ npm run build
 ```
 
 The backend health endpoint is available at `http://localhost:8000/health`.
+
+## Contact message storage
+
+Every successful `POST /api/contact` request is saved to the
+`contact_messages` table in `backend/cafe.db`. The database file is generated
+automatically when the backend starts and is ignored by Git, so local messages
+are not committed to the repository.
