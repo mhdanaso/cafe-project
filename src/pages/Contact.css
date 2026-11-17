@@ -21,6 +21,10 @@
 }
 
 .contact-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 0.8rem;
   background-color: #f5f0e8;
   color: #0d0d0d;

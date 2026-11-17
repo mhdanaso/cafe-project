@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ArrowRight, Clock3, Mail, MapPin, Phone } from "lucide-react";
 import "./VisitUs.css";
 
 function VisitUs() {
@@ -15,12 +16,13 @@ function VisitUs() {
 
           <Link to="/contact" className="visit-button">
             Contact Us
+            <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </div>
 
         <div className="visit-details">
           <div className="detail-block">
-            <h3>Find Us</h3>
+            <h3><MapPin size={19} aria-hidden="true" />Find Us</h3>
             <p>123 Beach Road</p>
             <p>Calicut, Kerala 673001</p>
             <a
@@ -33,18 +35,19 @@ function VisitUs() {
           </div>
 
           <div className="detail-block">
-            <h3>Opening Hours</h3>
+            <h3><Clock3 size={19} aria-hidden="true" />Opening Hours</h3>
             <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
             <p>Saturday - Sunday: 9:00 AM - 9:00 PM</p>
           </div>
 
           <div className="detail-block">
-            <h3>Contact</h3>
+            <h3><Phone size={19} aria-hidden="true" />Contact</h3>
             <p>
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <a href="tel:+919876543210"><Phone size={16} aria-hidden="true" />+91 98765 43210</a>
             </p>
             <p>
               <a href="mailto:hello@riveracoffee.com">
+                <Mail size={16} aria-hidden="true" />
                 hello@riveracoffee.com
               </a>
             </p>

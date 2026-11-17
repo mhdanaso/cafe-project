@@ -1,8 +1,10 @@
+import { BookOpen } from "lucide-react";
 import "./About.css";
 
 function About() {
   return (
     <section className="about">
+      <BookOpen className="section-icon" size={32} aria-hidden="true" />
       <h2>Our Story</h2>
       <p>
         Rivera Coffee started as a small roasting experiment in a home kitchen.

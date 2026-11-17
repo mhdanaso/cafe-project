@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import "./Hero.css";
 
 function Hero() {
@@ -8,6 +9,7 @@ function Hero() {
       <p>Small-batch beans, roasted fresh every morning.</p>
       <Link to="/menu" className="cta-button">
         View Menu
+        <ArrowRight size={18} aria-hidden="true" />
       </Link>
     </section>
   );

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Minus, Plus, ShoppingCart } from "lucide-react";
 import SEO from "../components/SEO";
 import "./Menu.css";
 
@@ -136,6 +137,7 @@ function Menu() {
                     <span>₹{item.price}</span>
                   </div>
                   <button type="button" onClick={() => addToCart(item)}>
+                    <Plus size={16} aria-hidden="true" />
                     Add
                   </button>
                 </div>
@@ -143,7 +145,7 @@ function Menu() {
             </div>
 
             <aside className="cart-panel">
-              <h2>Your order</h2>
+              <h2><ShoppingCart size={22} aria-hidden="true" />Your order</h2>
               {cart.length === 0 ? (
                 <p>Your cart is empty.</p>
               ) : (
@@ -153,9 +155,21 @@ function Menu() {
                       <div className="cart-item" key={item.id}>
                         <span>{item.name}</span>
                         <div>
-                          <button type="button" onClick={() => changeQuantity(item.id, -1)}>-</button>
+                          <button
+                            type="button"
+                            aria-label={`Decrease ${item.name} quantity`}
+                            onClick={() => changeQuantity(item.id, -1)}
+                          >
+                            <Minus size={14} aria-hidden="true" />
+                          </button>
                           <span>{item.quantity}</span>
-                          <button type="button" onClick={() => changeQuantity(item.id, 1)}>+</button>
+                          <button
+                            type="button"
+                            aria-label={`Increase ${item.name} quantity`}
+                            onClick={() => changeQuantity(item.id, 1)}
+                          >
+                            <Plus size={14} aria-hidden="true" />
+                          </button>
                         </div>
                       </div>
                     ))}

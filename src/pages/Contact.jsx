@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Send } from "lucide-react";
 import SEO from "../components/SEO";
 import "./Contact.css";
 
@@ -78,6 +79,7 @@ function Contact() {
           />
           {error && <p className="error-msg">{error}</p>}
           <button type="submit" disabled={isSubmitting}>
+            <Send size={17} aria-hidden="true" />
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>
         </form>

@@ -21,7 +21,9 @@
 }
 
 .cta-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-top: 2rem;
   padding: 0.9rem 2.2rem;
   background-color: #f5f0e8;
