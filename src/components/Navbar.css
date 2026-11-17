@@ -4,7 +4,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 3rem;
-  background-color: #0d0d0d;
+  background-color: var(--color-bg);
 }
 
 .nav-brand {
@@ -15,7 +15,7 @@ nav {
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #f5f0e8;
+  color: var(--color-text);
 }
 
 .nav-links {
@@ -29,21 +29,21 @@ nav {
   align-items: center;
   gap: 0.4rem;
   text-decoration: none;
-  color: #d8d2c8;
+  color: var(--color-text-soft);
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
 }
 
 .nav-links li a:hover {
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .menu-toggle {
   display: none;
   border: 0;
-  color: #f5f0e8;
+  color: var(--color-text);
   background: transparent;
   cursor: pointer;
 }
@@ -66,7 +66,7 @@ nav {
     gap: 1rem;
     margin: 0;
     padding: 1rem;
-    background-color: #0d0d0d;
+    background-color: var(--color-bg);
   }
 
   .nav-links.open {
